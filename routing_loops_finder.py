@@ -120,6 +120,9 @@ def process_file(args):
         sys.stderr.write("min_ttl cannot be greater than max_ttl\n")
         exit(1)
 
+    if not args["delta"] > 0:
+        sys.stderr.write("Invalid value for delta. Delta has to be > 0\n")
+
     sys.stderr.write("Calculating total length of file to analyze:\n")
     file_length = get_len(to_analyze)
 

@@ -39,6 +39,7 @@ Finally, to print routing loops and their traceroutes, run:
 ```sh
 python3 routing_loops_finder.py -f sorted_output.yrp -m 246 -l 255
 ```
+Note that you can change the definition of a routing loop by trying different values for the option "-d" i.e. the delta between the hop numbers of two repeating router IPs
 
 The output will be in the format of:
 
