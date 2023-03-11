@@ -9,7 +9,7 @@ In this work, we scan the entire IPv4 address space to detect persistent routing
 You can use "[Yarrp](https://www.cmand.org/yarrp/)", an Internet topology discovery tool, to detect routing loops. First, you need to clone this repository where a submodule of a specific branch of Yarrp exists.
 
 ```sh
-git clone git@github.com:RoutingLoops/code-and-data.git
+git clone --recursive git@github.com:RoutingLoops/code-and-data.git
 ```
 
 Then inside yarrp directory, follow the installation steps provided by Yarrp in its README.md, which are:
@@ -34,4 +34,15 @@ for i in {246..255}; do awk -v var=$i '$4==11 && $6==var {print $0}' $i.yrp | so
 sort -k1,1 -k6,6  strict-uniq* > sorted_output.yrp
 ```
 
+Finally, to print routing loops and their traceroutes, run:
 
+```sh
+python3 routing_loops_finder.py -f sorted_output.yrp -m 246 -l 255
+```
+
+The output will be in the format of:
+
+```
+dst_IP:
+hop# router_IP
+```
