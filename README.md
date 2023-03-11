@@ -1,13 +1,12 @@
-# Detecting routing loops on the Internet [![badge](https://img.shields.io/badge/In%20Proceedings-Passive%20and%20Active%20Measurement%202023-blue)]
-(https://link.springer.com/book/10.1007/978-3-031-28486-1)
+# Detecting routing loops on the Internet [![badge](https://img.shields.io/badge/In%20Proceedings-Passive%20and%20Active%20Measurement%202023-blue)](https://link.springer.com/book/10.1007/978-3-031-28486-1)
 
 Routing loops are the phenomenon in which packets never reach their intended destination because they loop among a sequence of routers. They are the result of network misconfigurations, inconsistencies, and errors in routing protocol implementations. In addition to being a pernicious threat to Internet reliability and reachability, routing loops can even enable or exacerbate denial of service attacks.
 
-In this work, we scan the entire IPv4 address space to detect persistent routing loops. The paper and its results can be found here: "[A Global Measurement of Routing Loops on the Internet](https://link.springer.com/chapter/10.1007/978-3-031-28486-1_16)"
+In this work, we scan the entire IPv4 address space to detect persistent routing loops. The paper and its results can be found here: [A Global Measurement of Routing Loops on the Internet](https://link.springer.com/chapter/10.1007/978-3-031-28486-1_16)
 
 ## Detect routing loops yourself
 
-You can use "(Yarrp)[https://www.cmand.org/yarrp/]", an Internet topology discovery tool, to detect routing loops. First, you need to clone this repository where a submodule of a specific branch of Yarrp exists.
+You can use "[Yarrp](https://www.cmand.org/yarrp/)", an Internet topology discovery tool, to detect routing loops. First, you need to clone this repository where a submodule of a specific branch of Yarrp exists.
 
 ```sh
 git clone git@github.com:RoutingLoops/code-and-data.git
